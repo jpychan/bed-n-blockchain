@@ -6,4 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(email: "test@test.com", password: "password")
+# User.create(email: "test@test.com", password: "password")
+
+Property.create(price:100, name:'Entire Condo in Downtown Toronto', address: '123 Queens St', city: 'Toronto', state: 'Ontario', country: 'Canada', capacity: 3, user_id: 1, property_type: 1)

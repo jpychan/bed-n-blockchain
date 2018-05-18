@@ -1,0 +1,31 @@
+<%= form_for @property do |form| %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+
+  <%= form.label :property_type %>
+  <%= form.select :property_type, options_for_select(@property_types.collect { |h| [h[0].humanize, h[0]] }, selected: @property.property_type), {} %><br>
+
+  <%= form.label :capacity %>
+  <%= form.number_field :capacity %><br>
+
+  <%= form.label :price %>
+  <%= form.number_field :price %><br>
+
+  <%= form.label :address %>
+  <%= form.text_field :address %><br>
+
+  <%= form.label :city %>
+  <%= form.text_field :city %><br>
+
+  <%= form.label :state %>
+  <%= form.text_field :state %><br>
+
+  <%= form.label :country %>
+  <%= form.text_field :country %><br>
+
+  <%= form.label :image %>
+  <%= form.file_field :image %><br>
+
+  <%= submit_tag("Submit") %>
+<% end %>

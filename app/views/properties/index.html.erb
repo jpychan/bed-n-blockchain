@@ -1,0 +1,17 @@
+<% @properties.each do |property| %>
+
+<div class="row">
+  <div class="col-sm-2">
+    <img class="property-image" src="<%= property.image.thumb.url %>">
+  </div>
+  <div class="col-sm-6">
+    <h1 class="property-name"><%= property.name %></h1>
+    <p class="property-details"><%= property.property_type.humanize %> - Sleeps <%= property.capacity %>
+    <br><%= property.address %> <%= property.city %></p>
+  </div>
+  <div class="col-sm-4">
+    <h1 class="property-price">$ <%= property.price %></h1>
+    <p class="per-night">per night</p>
+  </div>
+</div>
+<% end %>
