@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple AirBnB style app that allows users to list properties for rent and make bookings.
 
-Things you may want to cover:
+Built on Rails 5.1.5 with Postgresql
 
-* Ruby version
+Setup:
+1. Clone the repo.
+1. Install Rails and Postgres if you don't have them already.
+1. Run `bundle install`.
+1. Run `rails db:migrate`.
+1. Seed the database with `rails db:seed`.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Live Demo: https://bed-n-blockchain.herokuapp.com/
+Demo accounts:
+user1@test.com / password
+user2@test.com / password
+user3@test.com / password
