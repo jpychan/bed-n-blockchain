@@ -1,0 +1,17 @@
+<% @bookings.each do |booking| %>
+  <h1><%= booking.property.name %></h1>
+  <p><%= booking.start_date %> to <%= booking.end_date %></p>
+  <p>Status: <%= booking.status.humanize %>
+
+  <% if booking.status != 'cancelled' %>
+    <div>
+      <%= link_to "Edit Booking", [booking.property, booking] %>
+      <%= form_for [booking.property, booking] do |f| %>
+        <%= f.hidden_field :status, value: 'cancelled' %>
+        <%= f.submit "Cancel Booking"%>
+      <% end %>
+    </div>
+  <% end %>
+
+<% end %>
+  

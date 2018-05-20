@@ -36,6 +36,7 @@ class PropertiesController < ApplicationController
 
   def show
     @property = Property.find(params[:id])
+    @booking = Booking.new()
   end
 
   def edit
@@ -52,8 +53,6 @@ class PropertiesController < ApplicationController
 
   def update
     @property = Property.find(params[:id])
-
-    byebug
     
     if @property.update(property_params)
       redirect_to property_url

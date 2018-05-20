@@ -4,6 +4,7 @@
 
 <div>
   <div>
+    <p>Don't have an account? <%= link_to "Sign Up Here", new_user_path %></p>
     <%= form_for(:session, url: login_path) do |f| %>
 
       <%= f.label :email %>
@@ -14,6 +15,5 @@
 
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
-
   </div>
 </div>

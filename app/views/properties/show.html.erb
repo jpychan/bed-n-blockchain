@@ -14,3 +14,20 @@
     <p class="per-night">per night</p>
   </div>
 </div>
+
+<% if @property.user_id != current_user.id %>
+  <%= form_for [@property, @booking] do |f| %>
+    <div>
+      <%= f.label :start_date %> *<br>
+      <%= f.text_field :start_date, required: true, id: "start_date_datepicker" %>
+    </div>
+    <div>
+      <%= f.label :end_date %> *<br>
+      <%= f.text_field :end_date, required: true, id: "end_date_datepicker" %>
+    </div>
+
+    <%= f.submit "Make Booking"%>
+  <% end %>
+<% else %>
+  <%= link_to "Edit Property", edit_property_path %>
+<% end %>

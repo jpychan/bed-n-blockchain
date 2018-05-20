@@ -8,4 +8,8 @@
 
 # User.create(email: "test@test.com", password: "password")
 
-Property.create(price:100, name:'Entire Condo in Downtown Toronto', address: '123 Queens St', city: 'Toronto', state: 'Ontario', country: 'Canada', capacity: 3, user_id: 1, property_type: 1)
+# Property.create(price:100, name:'Entire Condo in Downtown Toronto', address: '123 Queens St', city: 'Toronto', state: 'Ontario', country: 'Canada', capacity: 3, user_id: 1, property_type: 1)
+
+# User.create(email: "booking@test.com", password: "password")
+
+Booking.create(user_id: 2, property_id: 1, start_date: Date.today, end_date: Date.tomorrow)

@@ -33,6 +33,10 @@ gem 'bcrypt', '~> 3.1.7'
 # Bootstrap CSS
 gem 'bootstrap', '~> 4.0.0'
 
+#Jquery UI
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 #Image Upload
 gem 'carrierwave', '~> 1.2'
 gem 'mini_magick', '~> 4.8'
