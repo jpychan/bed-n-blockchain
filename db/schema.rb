@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20180519184758) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bookings", force: :cascade do |t|
     t.date "start_date", null: false
     t.date "end_date", null: false
-    t.integer "property_id"
-    t.integer "user_id"
+    t.bigint "property_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "status", default: 0
@@ -34,7 +37,7 @@ ActiveRecord::Schema.define(version: 20180519184758) do
     t.string "country", null: false
     t.integer "capacity", default: 1
     t.string "image"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_properties_on_user_id"
@@ -47,4 +50,7 @@ ActiveRecord::Schema.define(version: 20180519184758) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "bookings", "properties"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "properties", "users"
 end

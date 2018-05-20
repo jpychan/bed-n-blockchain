@@ -1,15 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-# User.create(email: "test@test.com", password: "password")
-
-# Property.create(price:100, name:'Entire Condo in Downtown Toronto', address: '123 Queens St', city: 'Toronto', state: 'Ontario', country: 'Canada', capacity: 3, user_id: 1, property_type: 1)
-
-# User.create(email: "booking@test.com", password: "password")
-
-Booking.create(user_id: 2, property_id: 1, start_date: Date.today, end_date: Date.tomorrow)
+Property.create!([
+  {price: 100, name: "Private Unit By the Park", property_type: "shared_room", address: "1860 Bayview Ave", city: "East York", state: "Ontario", country: "Canada", capacity: 3, image: "property1.jpg", user_id: 1},
+  {price: 200, name: "Entire Condo in Downtown Toronto", property_type: "shared_room", address: "1 Toronto St", city: "Toronto", state: "Ontario", country: "Canada", capacity: 3, image: "property4.jpg", user_id: 1},
+  {price: 70, name: "Room in Quiet Neighbourhood", property_type: "private_room", address: "83 Redpath Avenue", city: "Toronto", state: "Ontario", country: "Canada", capacity: 3, image: "property3.jpg", user_id: 2},
+  {price: 40, name: "Shared Room in Koreatown", property_type: "shared_room", address: "215 Grace St", city: "Toronto", state: "Ontario", country: "Canada", capacity: 3, image: "property2.jpeg", user_id: 3}
+])
+User.create!([
+  {email: "user1@test.com", password_digest: "$2a$10$rAwFm69chckdOAs8VNyYsOpksSbH1z/ORrsCKZ.hja724MFkrwfge"},
+  {email: "user2@test.com", password_digest: "$2a$10$xkyQE0uS27LcSDYwxbfoh.nD3CxzMMPf/lGCjSeE1h9tiiC9CaCri"},
+  {email: "user3@test.com", password_digest: "$2a$10$FIIYYHefc.Gnlmi.G.YSiOpVwqt2f9bBkzCZ/0YbTV8dGec6HoJ/W"}
+])
